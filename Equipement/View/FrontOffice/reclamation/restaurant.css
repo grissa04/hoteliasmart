@@ -1,0 +1,21 @@
+/* Include all styles from chambre.css first, then add: */
+
+.header h1 {
+    color: #FF9800; /* Different color for restaurant */
+}
+
+.header h1::after {
+    background: #FF9800;
+}
+
+.btn-primary {
+    background: #FF9800;
+}
+
+.btn-primary:hover {
+    background: #F57C00;
+}
+
+.message {
+    border-left: 4px solid #FF9800;
+}

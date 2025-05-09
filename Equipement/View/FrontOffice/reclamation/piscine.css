@@ -1,0 +1,54 @@
+textarea {
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea.valid {
+    border-color: #4CAF50;
+}
+
+textarea.invalid {
+    border-color: #ff0000;
+}
+
+.validation-message {
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.validation-error {
+    color: #ff0000;
+}
+
+.validation-success {
+    color: #4CAF50;
+}
+
+
+/* Include all styles from chambre.css first, then add: */
+
+.header h1 {
+    color: #2196F3; /* Different color for piscine */
+}
+
+.header h1::after {
+    background: #2196F3;
+}
+
+.btn-primary {
+    background: #2196F3;
+}
+
+.btn-primary:hover {
+    background: #1976D2;
+}
+
+.message {
+    border-left: 4px solid #2196F3;
+}

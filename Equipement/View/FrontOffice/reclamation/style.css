@@ -1,0 +1,329 @@
+/* Modern Base Styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #3498db;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f1c40f;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Modern Header */
+.top-banner {
+    background: var(--white);
+    padding: 15px 40px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: translateY(-2px);
+}
+
+/* Modern Cards */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.option-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+    height: 400px;
+    position: relative;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.option-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.card-description {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Modern Search Bar */
+.search-bar {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 8px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    width: 400px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Modern Header Text */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary-color); /* Fallback color */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Reclamation Styles */
+.reclamation-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.reclamation-content {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.response-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.response-content.validated {
+    border-left: 4px solid var(--success-color);
+}
+
+.response-content.rejected {
+    border-left: 4px solid var(--danger-color);
+}
+
+/* Response Form Styles */
+.response-form {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Button Styles */
+.submit-btn,
+.validate-btn,
+.reject-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.validate-btn {
+    background: var(--success-color);
+    color: var(--white);
+}
+
+.validate-btn:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+}
+
+.reject-btn {
+    background: var(--danger-color);
+    color: var(--white);
+}
+
+.reject-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Status Badges */
+.validation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.validation-badge.validated {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.validation-badge.rejected {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.validation-badge.pending {
+    background: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffe0b2;
+}
+
+/* Tab Styles */
+.tab {
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    background: var(--white);
+    margin-bottom: 20px;
+}
+
+.tablinks {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tablinks:hover {
+    background: #f5f5f5;
+}
+
+.tablinks.active {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reclamation-card {
+        padding: 15px;
+    }
+    
+    .validation-badge {
+        font-size: 0.8em;
+    }
+    
+    .tab {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .tablinks {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+    }
+}
